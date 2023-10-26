@@ -1,3 +1,9 @@
 [submodule "Active-Internal-Queue"]
 	path = Active-Internal-Queue
 	url = https://github.com/giobart/Active-Internal-Queue.git
+[submodule "scAtteR-plus-plus"]
+	path = scAtteR-plus-plus
+	url = https://github.com/cao-jacky/scAtteR-plus-plus
+[submodule "scAtteR"]
+	path = scAtteR
+	url = https://github.com/cao-jacky/scAtteR
