@@ -17,6 +17,7 @@ Artifacts for the paper "Characterizing Distributed Mobile Augmented Reality App
 │		├── fig3
 │		├── fig6
 │		├── fig7
+│		├── automation
 │		└── README.md
 └── README.md 			 
 
