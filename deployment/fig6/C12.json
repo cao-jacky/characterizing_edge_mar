@@ -1,0 +1,182 @@
+{
+    "microservices": [
+                {
+                    "microserviceID": "",
+                    "microservice_name": "primary",
+                    "microservice_namespace": "deploy",
+                    "virtualization": "container",
+                    "cmd": ["/bin/bash", "-c",
+                            "/home/SidecarQueue -entry=true -exit=false -p=50101 -next=10.30.102.1:50102 -sidecar=localhost:5000 -analytics=1 -ms=50 -qsize=100 >> output.txt 2>&1 & tail -f output.txt & /home/src/build/server primary"],
+                    "health-check": ["/bin/bash", "-c", "sleep 5"],
+                    "memory": 1000,
+                    "vcpus": 1,
+                    "vgpus": 0,
+                    "vtpus": 0,
+                    "bandwidth_in": 0,
+                    "bandwidth_out": 0,
+                    "storage": 0,
+                    "code": "ghcr.io/giobart/arpipeline:latest",
+                    "state": "",
+                    "port": "50001:50001/udp",
+                    "addresses": {
+                        "rr_ip": "10.30.100.1"
+                    },
+                    "constraints": [
+                        {
+                            "type": "direct",
+                            "node": "cm-01-05-061",
+                            "cluster": "CoNEXT"
+                        }
+                    ],
+                    "connectivity": [],
+                    "added_files": []
+                },
+                {
+                    "microserviceID": "",
+                    "microservice_name": "sift",
+                    "microservice_namespace": "deploy",
+                    "virtualization": "container",
+                    "cmd": ["/bin/bash", "-c",
+                            "/home/SidecarQueue -entry=false -exit=false -p=50102 -next=10.30.103.1:50103 -sidecar=localhost:5000 -analytics=1 -parallel=2 -ms=50 -qsize=100 >> output.txt 2>&1 & tail -f output.txt & /home/src/build/server sift"],
+                    "health-check": ["/bin/bash", "-c", "sleep 5"],
+                    "memory": 1000,
+                    "vcpus": 1,
+                    "vgpus": 1,
+                    "vtpus": 0,
+                    "bandwidth_in": 0,
+                    "bandwidth_out": 0,
+                    "storage": 0,
+                    "code": "ghcr.io/giobart/arpipeline:latest",
+                    "state": "",
+                    "addresses": {
+                        "rr_ip": "10.30.102.1"
+                    },
+                    "constraints": [
+                        {
+                            "type": "direct",
+                            "node": "cm-01-05-061",
+                            "cluster": "CoNEXT"
+                        }
+                    ],
+                    "connectivity": [],
+                    "added_files": []
+                },
+                {
+                    "microserviceID": "",
+                    "microservice_name": "encoding",
+                    "microservice_namespace": "deploy",
+                    "virtualization": "container",
+                    "cmd": ["/bin/bash", "-c",
+                            "/home/SidecarQueue -entry=false -exit=false -p=50103 -next=10.30.104.1:50104 -sidecar=localhost:5000 -analytics=1 -parallel=2 -ms=70 -qsize=100 >> output.txt & tail -f output.txt & /home/src/build/server encoding"],
+                    "health-check": ["/bin/bash", "-c", "sleep 5"],
+                    "memory": 1000,
+                    "vcpus": 1,
+                    "vgpus": 1,
+                    "vtpus": 0,
+                    "bandwidth_in": 0,
+                    "bandwidth_out": 0,
+                    "storage": 0,
+                    "code": "ghcr.io/giobart/arpipeline:latest",
+                    "state": "",
+                    "addresses": {
+                        "rr_ip": "10.30.103.1"
+                    },
+                    "constraints": [
+                        {
+                            "type": "direct",
+                            "node": "gpu02",
+                            "cluster": "CoNEXT"
+                        }
+                    ],
+                    "connectivity": [],
+                    "added_files": []
+                },
+                {
+                    "microserviceID": "",
+                    "microservice_name": "lsh",
+                    "microservice_namespace": "deploy",
+                    "virtualization": "container",
+                    "cmd": ["/bin/bash", "-c",
+                            "/home/SidecarQueue -entry=false -exit=false -p=50104 -next=10.30.105.1:50105 -sidecar=localhost:5000 -analytics=1 -parallel=2 -ms=80 -qsize=100 >> output.txt & tail -f output.txt & /home/src/build/server lsh"],
+                    "health-check": ["/bin/bash", "-c", "sleep 5"],
+                    "memory": 1000,
+                    "vcpus": 1,
+                    "vgpus": 1,
+                    "vtpus": 0,
+                    "bandwidth_in": 0,
+                    "bandwidth_out": 0,
+                    "storage": 0,
+                    "code": "ghcr.io/giobart/arpipeline:latest",
+                    "state": "",
+                    "addresses": {
+                        "rr_ip": "10.30.104.1"
+                    },
+                    "constraints": [
+                        {
+                            "type": "direct",
+                            "node": "gpu02",
+                            "cluster": "CoNEXT"
+                        }
+                    ],
+                    "connectivity": [],
+                    "added_files": []
+                },
+                {
+                    "microserviceID": "",
+                    "microservice_name": "matching",
+                    "microservice_namespace": "deploy",
+                    "virtualization": "container",
+                    "cmd": ["/bin/bash", "-c",
+                            "/home/SidecarQueue -entry=false -exit=true -p=50105 -sidecar=localhost:5000 -analytics=1 -ms=80 -qsize=100 >> output.txt & tail -f output.txt & /home/src/build/server matching"],
+                    "health-check": ["/bin/bash", "-c", "sleep 5"],
+                    "memory": 1000,
+                    "vcpus": 1,
+                    "vgpus": 1,
+                    "vtpus": 0,
+                    "bandwidth_in": 0,
+                    "bandwidth_out": 0,
+                    "storage": 0,
+                    "code": "ghcr.io/giobart/arpipeline:latest",
+                    "state": "",
+                    "addresses": {
+                        "rr_ip": "10.30.105.1"
+                    },
+                    "constraints": [
+                        {
+                            "type": "direct",
+                            "node": "gpu02",
+                            "cluster": "CoNEXT"
+                        }
+                    ],
+                    "connectivity": [],
+                    "added_files": []
+                },
+                {
+                    "microserviceID": "",
+                    "microservice_name": "client",
+                    "microservice_namespace": "deploy",
+                    "virtualization": "container",
+                    "cmd": ["/bin/bash","-c","sed -i 's/0.0.0.0/10.30.100.1/' client.py && sed -i 's/50001/50101/' client.py && python ./client.py"],
+                    "memory": 100,
+                    "vcpus": 0,
+                    "vgpus": 0,
+                    "vtpus": 0,
+                    "bandwidth_in": 0,
+                    "bandwidth_out": 0,
+                    "storage": 0,
+                    "code": "ghcr.io/cao-jacky/ar_client:2023-06-14_1741",
+                    "state": "",
+                    "constraints": [
+                            {
+                                "type": "direct",
+                                "node": "praktikum4;x86-apu-fujitsu",
+                                "cluster": "CoNEXT"
+                            }
+                        ],
+                      "connectivity": [],
+                      "added_files": []
+                }
+            
+        
+    ]
+}

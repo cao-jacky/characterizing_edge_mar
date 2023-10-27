@@ -34,16 +34,16 @@
 
 | File | Experiment Dexription | Paper Figure |
 | -------- | -------- | -------- |
-| `fig2/E1.yaml` | Deployment scAtteR in E1 | Fig 2 |
-| `fig2/E2.yaml` | Deployment scAtteR in E2 | Fig 2 |
-| `fig2/C12.yaml` | Deployment scAtteR in E1,E1,E2,E2,E2 | Fig 2 |
-| `fig2/C21.yaml` | Deployment scAtteR in E1,E1,E2,E2,E2 | Fig 2 |
-| `fig3/scatter.yaml` | Deployment scAtteR managed by orchestrator| Fig 3 |
-| `fig6/E1.yaml` | Deployment scAtteR++ in E1 | Fig 6 |
-| `fig6/E2.yaml` | Deployment scAtteR++ in E2 | Fig 6 |
-| `fig6/C12.yaml` | Deployment scAtteR++ in E1,E1,E2,E2,E2 | Fig 6 |
-| `fig6/C21.yaml` | Deployment scAtteR++ in E1,E1,E2,E2,E2 | Fig 6 |
-| `fig7/scatterpp.yaml` | Deployment scAtteR++ managed by orchestrator| Fig 7 |
+| `fig2/E1.json` | Deployment scAtteR in E1 | Fig 2 |
+| `fig2/E2.json` | Deployment scAtteR in E2 | Fig 2 |
+| `fig2/C12.json` | Deployment scAtteR in E1,E1,E2,E2,E2 | Fig 2 |
+| `fig2/C21.json` | Deployment scAtteR in E1,E1,E2,E2,E2 | Fig 2 |
+| `fig3/scatter.json` | Deployment scAtteR managed by orchestrator| Fig 3 |
+| `fig6/E1.json` | Deployment scAtteR++ in E1 | Fig 6 |
+| `fig6/E2.json` | Deployment scAtteR++ in E2 | Fig 6 |
+| `fig6/C12.json` | Deployment scAtteR++ in E1,E1,E2,E2,E2 | Fig 6 |
+| `fig6/C21.json` | Deployment scAtteR++ in E1,E1,E2,E2,E2 | Fig 6 |
+| `fig7/scatterpp.json` | Deployment scAtteR++ managed by orchestrator| Fig 7 |
 
 8) Hit the <img style='vertical-align:middle; display:inline;' src="./img/upload.png" alt="upload config" /> button. 
 
