@@ -24,7 +24,7 @@
 
 ## 🖼️ Container Images
 
-- scAtter `ghcr.io/cao-jacky/ar_server:20230131_1034`
+- scAtter `ghcr.io/cao-jacky/ar_server:20230125_1348`
 - scAtteR++ `ghcr.io/giobart/arpipeline:latest`
 - Active-Internal-Queue sidecar base 
 	- cuda12 compatible `ghcr.io/giobart/active-internal-queue/active-sidecar-queue:v1.0.10-cuda12` 

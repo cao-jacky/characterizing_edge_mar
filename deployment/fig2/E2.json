@@ -14,7 +14,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230125_1348",
                     "state": "",
                     "port": "50001:50001/udp",
                     "addresses": {
@@ -44,7 +44,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230125_1348",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.101.1"
@@ -73,7 +73,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230125_1348",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.102.1"
@@ -102,7 +102,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230125_1348",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.103.1"
@@ -131,7 +131,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230125_1348",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.104.1"
