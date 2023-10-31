@@ -24,7 +24,7 @@
                     "constraints": [
                         {
                             "type": "direct",
-                            "node": "gpu02;cm-01-05-061",
+                            "node": "cm-01-05-061",
                             "cluster": "CoNEXT"
                         }
                     ],
