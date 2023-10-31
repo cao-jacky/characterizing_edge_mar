@@ -4,7 +4,7 @@
 
 **⚠️  For artifact evaluation committee we provide remote access to a running Oakestra cluster satisfying these requirements ⚠️**
 
-- Runing [Oakestra](oakestra.io) Cluster, (Wiki available at [Oakestra Wiki](https://www.oakestra.io/docs/)
+- Runing [Oakestra](oakestra.io) Cluster, (Wiki available at [Oakestra Wiki](https://www.oakestra.io/docs/))
 - At least 1 cluster with at least 1 amd64 GPU capable node.  
 
 ## Deployment Procedure
@@ -14,7 +14,7 @@
 
 ![Login](./img/login.png)
 
-3) On top right click (+) Add Application 
+3) On top left click (+) Add Application 
 
 ![Add App step 1](./img/add.png)
 
@@ -30,7 +30,7 @@
 
 ![SLA](./img/SLA.png)
 
-7) Click on `Select File to Upload` and provide one of the `.yaml` files according to the experiment that needs to be reproduced. 
+7) Click on `Select File to Upload` and provide one of the `.json` files according to the experiment that needs to be reproduced. 
 
 | File | Experiment Dexription | Paper Figure |
 | -------- | -------- | -------- |
@@ -78,7 +78,7 @@ Monitor the cluster status and before performing the next experiment make sure t
 
 ## Monitor client QoS metrics and Cluster status
 
-For Artifact evaluation on the public Oakestra cluster, the `instance 0` of each client will log FPS and Avg latency in real-time to the Grafana dashboard, together with the cluster resources consumptions advertised by the Cluster Orchestrator. 
+For Artifact evaluation on the public Oakestra cluster, the sum of each client FPS and Avg latency will be shown in real-time to the Grafana dashboard, together with the cluster resources consumptions advertised by the Cluster Orchestrator. 
 
 From the Grafana Dashboard, it is, therefore possible to monitor the following metrics:
 
@@ -94,11 +94,9 @@ From the Grafana Dashboard, it is, therefore possible to monitor the following m
 
 ![cluster](./img/cluster.png)
 
-3) All the metrics should appear in this panel and should automatically update every 5 seconds.
+3) All the metrics should appear in this page and should automatically update every 5 seconds.
 
 ![metrics](./img/metrics.png)
-
-**N.b.:** Even when scaling up the clients, only the metrics of the instance `0` of the clients will be shown here. In case of client failure or execution terminated, it's necessary to re-deploy the entire experiment.  
 
 ## Scaling up the clients
 

@@ -1,29 +1,43 @@
+# Experimental results
+
+The data from the experiments shown in our paper can be downloded [here](https://drive.google.com/drive/folders/163MJBB8trelWhNb4KZRCZZzbMQC8V68Q?usp=share_link)
+
+The dataset is composed of the following subfolders:
+
+- scatter-baseline: system log data used to generate figure 2
+- scatter-cloud: system log data used to generate figure 4
+- scatter-scaling: system log data used to generate figure 3
+- scatterpp-baseline: system log data used to generate figure 6
+- scatterpp-scaline-10: system log data used to generate figure 7 and 8
+
 # Analysis and Graphing with Jupyter Notebooks
 
 As part of our paper, we used two notebooks to produce the graphs found in our final manuscript:
 
 1. `processing.ipynb`, which was used to perform the pre-processing on the data log files produced by `scAtteR` and `scAtteR++`, and `Oakestra`. The script generates .csv files of the pre-processed log data to be used by the following notebook.
-2. `graphs.ipynb`, which was used to read the .csv files and then create the graphs 
+2. `graphs-<experiment-name>.ipynb`, which was used to read the .csv files and then create the graphs 
 
-Both notebooks can be run in a cell-by-cell fashion, but modifications are required to the files so that data is read and analysed properly.
+All notebooks can be run in a cell-by-cell fashion, but modifications are required to the files so that data is read and analysed properly.
 
 ## Processing
 
 1. The `base_path` variable is a string which should point to the root folder containing the data folders of the experiments performed.
-2. The `experiments` variable is a list which contains the specific names of the experiments/data folders to be pre-processed.
+2. The `experiments` variable is a list which contains the specific names of the experiments/data folders to be pre-processed. By default all folders in the dataset are executed.
 
 All the cells can then be run in order from the top of the notebook to the bottom. Once the final cell begins executing and the log files are being analysed, .csv data files will be generated, which can be loaded by the graphing notebook.
 
 ## Graphing 
 
+Each `graphs-<experiment-name>.ipynb` plots the result of the data folder with the corresponding name. Note that the pre-processing (previous section) must be performed before the plot. 
+
 1. The `path` string variable should point to the location of where the processed .csv files are.
-2. The `graphs` dictionary/JSON structure contains the details of the graphs to be created. The following is an example with comments explaining the general structure. `graphs.ipynb` contains a more comprehensive example structure. 
+2. The `graphs` dictionary/JSON structure contains the details of the graphs to be created. This can be customized to change the plot shape and type. The following is an example with comments explaining the general structure. 
 
 ```python
 graphs = {
     "graph1": {
         "name": "edge", # file name
-        "data": ["31.1.2023-baseline"], # name of corresponding folder of results
+        "data": ["scatter-baseline"], # name of corresponding folder of results
         "permutation_order": [1, 0, 3, 2], # for rearranging the order of the experiment permutations
         "plots": {
             "plot1": {

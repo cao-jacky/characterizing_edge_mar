@@ -6,7 +6,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "/home/SidecarQueue -entry=true -exit=false -p=50101 -next=10.30.102.1:50102 -sidecar=localhost:5000 -analytics=1 -ms=100 -qsize=5 >> output.txt 2>&1 & tail -f output.txt & /home/src/build/server primary"],
+                            "/home/SidecarQueue -entry=true -exit=false -p=50101 -next=10.30.102.1:50102 -sidecar=localhost:5000 -analytics=1 -parallel=5 -ms=100 -qsize=10 >> output.txt 2>&1 & tail -f output.txt & /home/src/build/server primary"],
                     "health-check": ["/bin/bash", "-c", "sleep 5"],
                     "memory": 1000,
                     "vcpus": 1,
@@ -24,7 +24,7 @@
                     "constraints": [
                         {
                             "type": "direct",
-                            "node": "cm-01-05-061",
+                            "node": "gpu02;cm-01-05-061",
                             "cluster": "CoNEXT"
                         }
                     ],
@@ -37,7 +37,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "/home/SidecarQueue -entry=false -exit=false -p=50102 -next=10.30.103.1:50103 -sidecar=localhost:5000 -analytics=1 -parallel=2 -ms=100 -qsize=5 >> output.txt 2>&1 & tail -f output.txt & /home/src/build/server sift"],
+                            "/home/SidecarQueue -entry=false -exit=false -p=50102 -next=10.30.103.1:50103 -sidecar=localhost:5000 -analytics=1 -parallel=5 -ms=100 -qsize=10 >> output.txt 2>&1 & tail -f output.txt & /home/src/build/server sift"],
                     "health-check": ["/bin/bash", "-c", "sleep 5"],
                     "memory": 1000,
                     "vcpus": 1,
@@ -67,7 +67,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "/home/SidecarQueue -entry=false -exit=false -p=50103 -next=10.30.104.1:50104 -sidecar=localhost:5000 -analytics=1 -parallel=2 -ms=100 -qsize=5 >> output.txt & tail -f output.txt & /home/src/build/server encoding"],
+                            "/home/SidecarQueue -entry=false -exit=false -p=50103 -next=10.30.104.1:50104 -sidecar=localhost:5000 -analytics=1 -parallel=5 -ms=100 -qsize=10 >> output.txt & tail -f output.txt & /home/src/build/server encoding"],
                     "health-check": ["/bin/bash", "-c", "sleep 5"],
                     "memory": 1000,
                     "vcpus": 1,
@@ -97,7 +97,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "/home/SidecarQueue -entry=false -exit=false -p=50104 -next=10.30.105.1:50105 -sidecar=localhost:5000 -analytics=1 -parallel=2 -ms=100 -qsize=5 >> output.txt & tail -f output.txt & /home/src/build/server lsh"],
+                            "/home/SidecarQueue -entry=false -exit=false -p=50104 -next=10.30.105.1:50105 -sidecar=localhost:5000 -analytics=1 -parallel=5 -ms=100 -qsize=10 >> output.txt & tail -f output.txt & /home/src/build/server lsh"],
                     "health-check": ["/bin/bash", "-c", "sleep 5"],
                     "memory": 1000,
                     "vcpus": 1,
@@ -127,7 +127,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "/home/SidecarQueue -entry=false -exit=true -p=50105 -sidecar=localhost:5000 -analytics=1 -ms=100 -qsize=100 >> output.txt & tail -f output.txt & /home/src/build/server matching"],
+                            "/home/SidecarQueue -entry=false -exit=true -p=50105 -sidecar=localhost:5000 -analytics=1 -ms=100 -qsize=10 >> output.txt & tail -f output.txt & /home/src/build/server matching"],
                     "health-check": ["/bin/bash", "-c", "sleep 5"],
                     "memory": 1000,
                     "vcpus": 1,

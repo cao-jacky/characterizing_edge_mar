@@ -6,7 +6,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server primary 10.30.100.1 false"],
+                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server primary 10.30.100.1"],
                     "memory": 1000,
                     "vcpus": 1,
                     "vgpus": 0,
@@ -14,7 +14,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230127_1531",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
                     "state": "",
                     "port": "50001:50001/udp",
                     "addresses": {
@@ -36,7 +36,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server sift 10.30.100.1 false"],
+                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server sift 10.30.100.1"],
                     "memory": 1000,
                     "vcpus": 1,
                     "vgpus": 1,
@@ -44,7 +44,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230127_1531",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.101.1"
@@ -65,7 +65,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server encoding 10.30.100.1 false"],
+                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server encoding 10.30.100.1"],
                     "memory": 1000,
                     "vcpus": 1,
                     "vgpus": 1,
@@ -73,7 +73,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230127_1531",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.102.1"
@@ -94,7 +94,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server lsh 10.30.100.1 false"],
+                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server lsh 10.30.100.1"],
                     "memory": 1000,
                     "vcpus": 1,
                     "vgpus": 1,
@@ -102,7 +102,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230127_1531",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.103.1"
@@ -123,7 +123,7 @@
                     "microservice_namespace": "deploy",
                     "virtualization": "container",
                     "cmd": ["/bin/bash", "-c",
-                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server matching 10.30.100.1 false"],
+                            "cd home/ar_server/lib/cudasift && rm CMakeCache.txt && sed -i 's/-arch=sm_75/-arch=sm_30/g' CMakeLists.txt && sed -i 's/-arch=sm_25/-arch=sm_30/g' CMakeLists.txt && sed -i 's/executable/library/g' CMakeLists.txt && cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release . && make && cd ../../build && make && cd ../ && ./server matching 10.30.100.1"],
                     "memory": 1000,
                     "vcpus": 1,
                     "vgpus": 1,
@@ -131,7 +131,7 @@
                     "bandwidth_in": 0,
                     "bandwidth_out": 0,
                     "storage": 0,
-                    "code": "ghcr.io/cao-jacky/ar_server:20230127_1531",
+                    "code": "ghcr.io/cao-jacky/ar_server:20230131_1034",
                     "state": "",
                     "addresses": {
                         "rr_ip": "10.30.104.1"
