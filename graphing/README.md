@@ -1,6 +1,6 @@
 # Experimental results
 
-The data from the experiments shown in our paper can be downloded [here](https://drive.google.com/drive/folders/163MJBB8trelWhNb4KZRCZZzbMQC8V68Q?usp=share_link)
+The data from the experiments shown in our paper can be downloded [here](https://doi.org/10.5281/zenodo.10063011)
 
 The dataset is composed of the following subfolders:
 
