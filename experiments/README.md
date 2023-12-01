@@ -2,10 +2,8 @@
 
 ## Pre-requisites
 
-**⚠️  For artifact evaluation committee we provide remote access to a running Oakestra cluster satisfying these requirements ⚠️**
-
 - Runing [Oakestra](oakestra.io) Cluster, (Wiki available at [Oakestra Wiki](https://www.oakestra.io/docs/))
-- At least 1 cluster with at least 1 amd64 GPU capable node.  
+- At least 1 cluster with at least 1 amd64 node with Nvidia GPU.  
 
 ## Deployment Procedure
 1) using Google Chrome, open in one browser tab the Oakestra Dashboard and in another tab the Grafana Dashboard. The artifact evaluation committee will receive a document with links and credentials to access a public Oakestra cluster. 
