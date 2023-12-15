@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/CoNEXT'23-Paper-blue)](https://www.giovannibartolomeo.it/pdf/Characterizing_Distributed_Mobile_Augmented_Reality_Applications_at_the_Edge_conext23.pdf)
+[![](https://img.shields.io/badge/CoNEXT'23-Paper-blue)](https://dl.acm.org/doi/abs/10.1145/3624354.3630584)
 
 <img width="80em" src="images/acm_reproduced_v1_1.png" align="right" />
 <img width="80em" src="images/acm_functional_v1_1.png" align="right" />
